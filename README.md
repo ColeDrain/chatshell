@@ -14,16 +14,17 @@ ChatShell reads your OpenAI API key from a JSON configuration file named config.
 
 Here's an example of what your configuration file should look like:
 
-`{
+``` json 
+{
   "OPENAI_AUTH_TOKEN": "your_api_key_here"
-}`
+}
+```
 
 ## Usage
 
 To use ChatShell, simply run the ask command followed by your query. For example:
 
-`bash
-chatshell ask "How do I list all files in a directory?"`
+`chatshell ask "How do I list all files in a directory?"`
 
 
 This will return a shell command that you can use to list all files in a directory.
@@ -31,7 +32,7 @@ This will return a shell command that you can use to list all files in a directo
 You can also enter chat mode by using the -c flag:
 
 
-chatshell ask -c "Hello, how are you?"
+`chatshell ask -c "Hello, how are you?"`
 
 
 This will enter chat mode and allow you to have a normal conversation with ChatGPT.
