@@ -9,8 +9,10 @@ To use ChatShell, you will need to have Golang installed on your machine. Once y
 go get github.com/coledrain/chatshell
 
 ## Configuration
+ChatShell reads your OpenAI API key from a JSON configuration file named config.json. By default, it looks for this file in the following directories:
 
-ChatShell reads your OpenAI API key from a JSON configuration file named config.json. By default, it looks for this file in the $HOME/.chatshell/ directory.
+- $HOME/.chatshell/ on macOS and Linux.
+- %USERPROFILE%/.chatshell/ on Windows.
 
 Here's an example of what your configuration file should look like:
 

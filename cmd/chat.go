@@ -32,6 +32,7 @@ func init() {
 	// Read the auth token from a configuration file
 	viper.SetConfigName("config")
 	viper.AddConfigPath("$HOME/.chatshell")
+	viper.AddConfigPath(`%USERPROFILE%/.chatshell`)
 	viper.SetEnvPrefix("OPENAI")
 	viper.AutomaticEnv()
 
