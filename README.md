@@ -6,7 +6,7 @@ ChatShell is a CLI tool that helps you find shell commands for specific tasks. I
 
 To use ChatShell, you will need to have Golang installed on your machine. Once you have installed Golang, you can install ChatShell using the following command:
 
-go get github.com/yourusername/chatshell
+go get github.com/coledrain/chatshell
 
 ## Configuration
 
