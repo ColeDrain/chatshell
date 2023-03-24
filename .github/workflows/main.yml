@@ -2,35 +2,31 @@ name: goreleaser
 
 on:
   push:
-    # run only against tags
     tags:
       - '*'
 
 permissions:
   contents: write
-  # packages: write
-  # issues: write
 
 jobs:
-  build:
-    name: goreleaser
+  goreleaser:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Check out code into the Go module directory
+      - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - run: git fetch --force --tags
-      
-      - name: Setup gO 1.20.2
-        uses: actions/setup-go@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
         with:
-          go-version: 1.20.2
+          go-version: '^1.20.2'
+        id: go
       
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v4
         with:
+          distribution: goreleaser
           version: latest
           args: release --clean
         env:
